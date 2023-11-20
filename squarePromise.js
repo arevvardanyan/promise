@@ -16,9 +16,9 @@ const squarePromise = function(inptPromise){
 const inp1 = Promise.resolve(6)
 const inp2 = Promise.resolve("16")
 const inp3 = Promise.resolve("asdf")
-const inp4 = Promise.reject("There is some error")
+const inp4 = Promise.reject(new Error("There is some error"))
 
-squarePromise(inp2).then((res)=>{
+squarePromise(inp4).then((res)=>{
     console.log("Resolved:", res)
 }).catch((err)=>{
     console.log("Rejected:", err)
